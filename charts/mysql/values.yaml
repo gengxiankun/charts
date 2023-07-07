@@ -1,0 +1,25 @@
+# Default values for mysql.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: mysql
+  tag: "8.0"
+
+volume:
+  storage: 2Gi
+  hostPath: /Users/gengxiankun/Variable/lib/mysql
+
+requests:
+  volume:
+    storage: 2Gi
+
+service:
+  type: LoadBalancer
+  port: 3306
+  targetPort: 3306
+
+mysql:
+  rootPassword: "123456"

@@ -1,0 +1,21 @@
+replicaCount: 1
+
+zookeeper:
+  connectString: zookeeper-0.zookeeper-headless:2181,zookeeper-1.zookeeper-headless:2181,zookeeper-2.zookeeper-headless:2181
+
+image:
+  repository: confluentinc/cp-kafka
+  tag: "6.2.0"
+
+volume:
+  storage: 1Gi
+  hostPath: /Users/gengxiankun/Variable/lib/kafka
+
+requests:
+  volume:
+    storage: 1Gi
+
+service:
+  type: LoadBalancer
+  port: 9092
+  targetPort: 9092
