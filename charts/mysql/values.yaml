@@ -8,13 +8,9 @@ image:
   repository: mysql
   tag: "8.0"
 
-volume:
-  storage: 2Gi
-  hostPath: /Users/gengxiankun/Variable/lib/mysql
-
-requests:
-  volume:
-    storage: 2Gi
+persistence:
+  size: 1Gi
+  storageClass: hostpath
 
 service:
   type: LoadBalancer
