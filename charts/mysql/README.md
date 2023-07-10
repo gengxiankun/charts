@@ -3,7 +3,7 @@
 ## TL;DR
 ```bash
 helm repo add gengxiankun-charts https://gengxiankun.github.io/charts/package/
-helm install my-mysql gengxiankun-charts/mysql --version 0.1.0
+helm install my-mysql gengxiankun-charts/mysql --version 0.2.0
 ```
 
 ## Prerequisites

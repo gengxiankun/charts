@@ -16,6 +16,18 @@ entries:
   mysql:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-07-10T14:29:48.611135+08:00"
+    description: A Helm chart for Kubernetes
+    digest: ca60448d5f72c0548a66a5bf7749d802b68114df29d16ff42a3c989b22e09f4a
+    name: mysql
+    type: application
+    sources:
+    - https://github.com/gengxiankun/charts/tree/master/charts/mysql
+    urls:
+    - https://gengxiankun.github.io/charts/package/mysql-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2023-07-07T18:11:16.88822+08:00"
     description: A Helm chart for Kubernetes
     digest: b6a66d6262c1f809c573c316480ae9cf6ed130cee3e6f0c0d953a6173c8fc437
