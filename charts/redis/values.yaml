@@ -8,13 +8,9 @@ image:
   repository: redis
   tag: "latest"
 
-volume:
-  storage: 2Gi
-  hostPath: /Users/gengxiankun/Variable/lib/redis
-
-requests:
-  volume:
-    storage: 2Gi
+persistence:
+  size: 1Gi
+  storageClass: hostpath
 
 service:
   type: LoadBalancer

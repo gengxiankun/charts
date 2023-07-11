@@ -1,6 +1,9 @@
 apiVersion: v2
 name: mysql
-description: A Helm chart for Kubernetes
+description: MySQL is an open-source relational database management system (RDBMS).
+
+sources: 
+  - https://github.com/gengxiankun/charts/tree/master/charts/mysql
 
 # A chart can be either an 'application' or a 'library' chart.
 #

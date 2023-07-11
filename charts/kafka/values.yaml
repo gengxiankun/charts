@@ -1,19 +1,15 @@
 replicaCount: 1
 
-zookeeper:
-  connectString: zookeeper-0.zookeeper-headless:2181,zookeeper-1.zookeeper-headless:2181,zookeeper-2.zookeeper-headless:2181
+kafka:
+  zookeeperConnect: zookeeper:2181
 
 image:
-  repository: confluentinc/cp-kafka
-  tag: "6.2.0"
+  repository: wurstmeister/kafka
+  tag: "latest"
 
-volume:
-  storage: 1Gi
-  hostPath: /Users/gengxiankun/Variable/lib/kafka
-
-requests:
-  volume:
-    storage: 1Gi
+persistence:
+  size: 1Gi
+  storageClass: hostpath
 
 service:
   type: LoadBalancer

@@ -3,65 +3,59 @@ entries:
   kafka:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-07T18:11:16.887998+08:00"
-    description: A Helm chart for Kubernetes
-    digest: a3264c8dc9bd23390e27643f548558733c67bb7859bdea33a6091149715e08ef
+    created: "2023-07-11T15:46:39.688413+08:00"
+    description: Apache Kafka is an open-source distributed event streaming platform
+      used by thousands of companies for high-performance data pipelines, streaming
+      analytics, data integration, and mission-critical applications.
+    digest: a719dbf41fc6531aa2fca9913f88758269373c66038f4e530dbae1894350b2bf
     name: kafka
-    type: application
     sources:
     - https://github.com/gengxiankun/charts/tree/master/charts/kafka
+    type: application
     urls:
-    - https://gengxiankun.github.io/charts/package/kafka-0.1.0.tgz
-    version: 0.1.0
+    - kafka-0.2.0.tgz
+    version: 0.2.0
   mysql:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-10T14:29:48.611135+08:00"
-    description: A Helm chart for Kubernetes
-    digest: ca60448d5f72c0548a66a5bf7749d802b68114df29d16ff42a3c989b22e09f4a
+    created: "2023-07-11T15:46:39.688618+08:00"
+    description: MySQL is an open-source relational database management system (RDBMS).
+    digest: 5ae33cdbb24c705a20196125a8d62dad3aa6211b80a5d3e36c8dd3fa7171c694
     name: mysql
-    type: application
     sources:
     - https://github.com/gengxiankun/charts/tree/master/charts/mysql
+    type: application
     urls:
-    - https://gengxiankun.github.io/charts/package/mysql-0.2.0.tgz
+    - mysql-0.2.0.tgz
     version: 0.2.0
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-07-07T18:11:16.88822+08:00"
-    description: A Helm chart for Kubernetes
-    digest: b6a66d6262c1f809c573c316480ae9cf6ed130cee3e6f0c0d953a6173c8fc437
-    name: mysql
-    type: application
-    sources:
-    - https://github.com/gengxiankun/charts/tree/master/charts/mysql
-    urls:
-    - https://gengxiankun.github.io/charts/package/mysql-0.1.0.tgz
-    version: 0.1.0
   redis:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-07T18:11:16.888374+08:00"
-    description: A Helm chart for Kubernetes
-    digest: e8d14c2194317c2ce0364b9501159581854ec1029fe3011ffd745c7a9e1d9400
+    created: "2023-07-11T15:46:39.688793+08:00"
+    description: Redis is an open source (BSD licensed), in-memory data structure
+      store, used as a database, cache, and message broker. Redis provides data structures
+      …
+    digest: 249d81012a516e83442c3f4058c89c1a0141266a3e24b28b73cc4854d256269e
     name: redis
-    type: application
     sources:
     - https://github.com/gengxiankun/charts/tree/master/charts/redis
+    type: application
     urls:
-    - https://gengxiankun.github.io/charts/package/redis-0.1.0.tgz
-    version: 0.1.0
+    - redis-0.2.0.tgz
+    version: 0.2.0
   zookeeper:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-07T18:11:16.888544+08:00"
-    description: A Helm chart for Kubernetes
-    digest: 1f094961eafd91658633218c8dd970b77dda6f88c97e91f8e6ec26b770769a7e
+    created: "2023-07-11T15:46:39.688971+08:00"
+    description: ZooKeeper is a centralized service for maintaining configuration
+      information, naming, providing distributed synchronization, and providing group
+      services.
+    digest: 1958d0a0495c1f55bb946e957fbe42a8a3cfb949820027d9dfa3d6df4f8be9e5
     name: zookeeper
-    type: application
     sources:
     - https://github.com/gengxiankun/charts/tree/master/charts/zookeeper
+    type: application
     urls:
-    - https://gengxiankun.github.io/charts/package/zookeeper-0.1.0.tgz
-    version: 0.1.0
-generated: "2023-07-07T18:11:16.886408+08:00"
+    - zookeeper-0.2.0.tgz
+    version: 0.2.0
+generated: "2023-07-11T15:46:39.688103+08:00"

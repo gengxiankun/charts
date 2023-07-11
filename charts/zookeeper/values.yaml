@@ -1,24 +1,14 @@
-replicaCount: 3
+replicaCount: 1
 
 image:
   repository: zookeeper
   tag: "3.6.2"
 
-volume:
-  storage: 1Gi
-  hostPath: /Users/gengxiankun/Variable/lib/zookeeper
-
-requests:
-  volume:
-    storage: 1Gi
+persistence:
+  size: 1Gi
+  storageClass: hostpath
 
 service:
   type: LoadBalancer
   port: 2181
   targetPort: 2181
-
-zookeeper:
-  servers:
-    - zookeeper-0.zookeeper-headless
-    - zookeeper-1.zookeeper-headless
-    - zookeeper-2.zookeeper-headless
