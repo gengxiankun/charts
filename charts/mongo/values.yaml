@@ -1,0 +1,22 @@
+# Default values for mysql.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: mongo
+  tag: "5.0"
+
+persistence:
+  size: 1Gi
+  storageClass: hostpath
+
+service:
+  type: LoadBalancer
+  port: 27017
+  targetPort: 27017
+
+mongo:
+  username: "root"
+  password: "123456"

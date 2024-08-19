@@ -3,7 +3,7 @@ entries:
   kafka:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-11T15:46:39.688413+08:00"
+    created: "2024-08-19T11:14:30.64706+08:00"
     description: Apache Kafka is an open-source distributed event streaming platform
       used by thousands of companies for high-performance data pipelines, streaming
       analytics, data integration, and mission-critical applications.
@@ -15,10 +15,23 @@ entries:
     urls:
     - kafka-0.2.0.tgz
     version: 0.2.0
+  mongo:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-08-19T11:14:30.647358+08:00"
+    description: MongoDB document databases provide high availability and easy scalability.
+    digest: 3f2b0f75717b0767486a52ed385f9bd9351703845dc5ff9e09f08b7c38d9c543
+    name: mongo
+    sources:
+    - https://github.com/gengxiankun/charts/tree/master/charts/mongo
+    type: application
+    urls:
+    - mongo-0.1.0.tgz
+    version: 0.1.0
   mysql:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-11T15:46:39.688618+08:00"
+    created: "2024-08-19T11:14:30.647518+08:00"
     description: MySQL is an open-source relational database management system (RDBMS).
     digest: 5ae33cdbb24c705a20196125a8d62dad3aa6211b80a5d3e36c8dd3fa7171c694
     name: mysql
@@ -31,7 +44,7 @@ entries:
   redis:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-11T15:46:39.688793+08:00"
+    created: "2024-08-19T11:14:30.647774+08:00"
     description: Redis is an open source (BSD licensed), in-memory data structure
       store, used as a database, cache, and message broker. Redis provides data structures
       …
@@ -46,7 +59,7 @@ entries:
   zookeeper:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-11T15:46:39.688971+08:00"
+    created: "2024-08-19T11:14:30.648311+08:00"
     description: ZooKeeper is a centralized service for maintaining configuration
       information, naming, providing distributed synchronization, and providing group
       services.
@@ -58,4 +71,4 @@ entries:
     urls:
     - zookeeper-0.2.0.tgz
     version: 0.2.0
-generated: "2023-07-11T15:46:39.688103+08:00"
+generated: "2024-08-19T11:14:30.646648+08:00"
