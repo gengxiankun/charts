@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  serviceName: {{ .Release.Name }}
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      volumes:
+        - name: config-volume
+          configMap:
+            name: rocketmq-file
+      containers:
+      - name: rmqnamesrv
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        env:
+        - name: MAX_HEAP_SIZE
+          value: {{ .Values.rocketmq.namesrv.max_heap_size }}
+        - name: HEAP_NEWSIZE
+          value: {{ .Values.rocketmq.namesrv.heap_newsize }}
+        ports:
+        - containerPort: 9876
+          name: rmqnamesrv
+        command: ["/bin/sh"]
+        args: ["mqnamesrv"]
+        volumeMounts:
+          - name: config-volume
+            mountPath: /home/rocketmq/rocketmq-5.3.0/bin/runserver.sh
+            subPath: runserver.sh
+      - name: rmqbroker
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        env:
+        - name: NAMESRV_ADDR
+          value: rmqnamesrv:9876
+        - name: MAX_HEAP_SIZE
+          value: {{ .Values.rocketmq.rmqbroker.max_heap_size }}
+        - name: HEAP_NEWSIZE
+          value: {{ .Values.rocketmq.rmqbroker.heap_newsize }}
+        ports:
+        - containerPort: 10909
+          name: rmqbroker09
+        - containerPort: 10911
+          name: rmqbroker1
+        - containerPort: 10912
+          name: rmqbroker12
+        command: ["/bin/sh"]
+        args: ["mqnamesrv"]
+        volumeMounts:
+          - name: config-volume
+            mountPath: /home/rocketmq/rocketmq-5.3.0/bin/runbroker.sh
+            subPath: runbroker.sh
+          - name: config-volume
+            mountPath: /home/rocketmq/rocketmq-5.3.0/config/broker.conf
+            subPath: broker.conf
+        

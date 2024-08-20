@@ -1,0 +1,26 @@
+# Default values for mysql.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: apache/rocketmq
+  tag: "5.3.0"
+
+persistence:
+  size: 1Gi
+  storageClass: hostpath
+
+service:
+  type: LoadBalancer
+  port: 9876
+  targetPort: 9876
+
+rocketmq:
+  namesrv:
+    max_heap_size: 256M
+    heap_newsize: 128M
+  rmqbroker:
+    max_heap_size: 256M
+    heap_newsize: 128M

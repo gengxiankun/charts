@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rocketmq-file
+  namespace: default
+data:
+{{- range tuple "broker.conf" "runbroker.sh" "runserver.sh"}}
+  {{ . }}: |-
+{{ $.Files.Get (printf "%s%s" "configs/" .) | indent 4 }}
+{{- end }}
