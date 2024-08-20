@@ -3,7 +3,7 @@
 ## TL;DR
 ```bash
 helm repo add gengxiankun-charts https://gengxiankun.github.io/charts/package/
-helm install rocketmq gengxiankun-charts/rocketmq --version 0.1.0
+helm install rocketmq gengxiankun-charts/rocketmq --version 0.3.0
 ```
 
 ## 先决条件
