@@ -38,7 +38,7 @@ spec:
         image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         env:
         - name: NAMESRV_ADDR
-          value: rmqnamesrv:9876
+          value: 127.0.0.1:9876
         - name: MAX_HEAP_SIZE
           value: {{ .Values.rocketmq.rmqbroker.max_heap_size }}
         - name: HEAP_NEWSIZE
@@ -47,16 +47,16 @@ spec:
         - containerPort: 10909
           name: rmqbroker09
         - containerPort: 10911
-          name: rmqbroker1
+          name: rmqbroker11
         - containerPort: 10912
           name: rmqbroker12
         command: ["/bin/sh"]
-        args: ["mqnamesrv"]
+        args: ["mqbroker", "-c", "/home/rocketmq/rocketmq-5.3.0/conf/broker.conf"]
         volumeMounts:
           - name: config-volume
             mountPath: /home/rocketmq/rocketmq-5.3.0/bin/runbroker.sh
             subPath: runbroker.sh
           - name: config-volume
-            mountPath: /home/rocketmq/rocketmq-5.3.0/config/broker.conf
+            mountPath: /home/rocketmq/rocketmq-5.3.0/conf/broker.conf
             subPath: broker.conf
         

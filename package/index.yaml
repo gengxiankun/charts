@@ -3,7 +3,7 @@ entries:
   kafka:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-20T15:56:40.00497+08:00"
+    created: "2024-08-20T17:14:35.86474+08:00"
     description: Apache Kafka is an open-source distributed event streaming platform
       used by thousands of companies for high-performance data pipelines, streaming
       analytics, data integration, and mission-critical applications.
@@ -18,7 +18,7 @@ entries:
   mongo:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-20T15:56:40.005563+08:00"
+    created: "2024-08-20T17:14:35.865225+08:00"
     description: MongoDB document databases provide high availability and easy scalability.
     digest: 3f2b0f75717b0767486a52ed385f9bd9351703845dc5ff9e09f08b7c38d9c543
     name: mongo
@@ -31,7 +31,7 @@ entries:
   mysql:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-20T15:56:40.005822+08:00"
+    created: "2024-08-20T17:14:35.86547+08:00"
     description: MySQL is an open-source relational database management system (RDBMS).
     digest: 5ae33cdbb24c705a20196125a8d62dad3aa6211b80a5d3e36c8dd3fa7171c694
     name: mysql
@@ -44,7 +44,7 @@ entries:
   redis:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-20T15:56:40.006148+08:00"
+    created: "2024-08-20T17:14:35.865755+08:00"
     description: Redis is an open source (BSD licensed), in-memory data structure
       store, used as a database, cache, and message broker. Redis provides data structures
       …
@@ -59,7 +59,20 @@ entries:
   rocketmq:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-20T15:56:40.00636+08:00"
+    created: "2024-08-20T17:14:35.866846+08:00"
+    description: A cloud-native "messaging, eventing, streaming" real-time data processing
+      platform, covering cloud-edge-device collaboration scenarios
+    digest: 2e722827db2f9a2bd9af3511d52acc1dfb8d7eac727a3ff03f25de6559810b29
+    name: rocketmq
+    sources:
+    - https://github.com/gengxiankun/charts/tree/master/charts/rocketmq
+    type: application
+    urls:
+    - rocketmq-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-08-20T17:14:35.866256+08:00"
     digest: bd743147136644b4cf0cefcd6ea4c3ac2ecc4dba561039b6eec0583b9dfacaa5
     name: rocketmq
     sources:
@@ -71,7 +84,7 @@ entries:
   zookeeper:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-08-20T15:56:40.006608+08:00"
+    created: "2024-08-20T17:14:35.867008+08:00"
     description: ZooKeeper is a centralized service for maintaining configuration
       information, naming, providing distributed synchronization, and providing group
       services.
@@ -83,4 +96,4 @@ entries:
     urls:
     - zookeeper-0.2.0.tgz
     version: 0.2.0
-generated: "2024-08-20T15:56:40.004409+08:00"
+generated: "2024-08-20T17:14:35.864248+08:00"

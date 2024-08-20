@@ -13,9 +13,18 @@ persistence:
   storageClass: hostpath
 
 service:
-  type: LoadBalancer
-  port: 9876
-  targetPort: 9876
+  - name: rmqnamesrv
+    port: 9876
+    targetPort: 9876
+  - name: rmqbroker09
+    port: 10909
+    targetPort: 10909
+  - name: rmqbroker11
+    port: 10911
+    targetPort: 10911
+  - name: rmqbroker12
+    port: 10912
+    targetPort: 10912
 
 rocketmq:
   namesrv:
